@@ -149,10 +149,12 @@ void app_main(void)
         can_message->sz = (uint16_t)message.data_length_code;
         memcpy(&can_message->data, &message.data, CAN_MESSAGE_SIZE);
         ++MESSAGE_BUF->count;
-        ESP_LOGI(TAG, "id %03ld, %d bytes, %02X %02X %02X %02X %02X %02X %02X %02X",
-                 message.identifier, message.data_length_code, message.data[0], message.data[1],
-                 message.data[2], message.data[3], message.data[4], message.data[5],
-                 message.data[6], message.data[7]);
+        if (can_message->id == 49 && can_message->data[0] == 0x13) {
+            ESP_LOGI(TAG, "id %03ld, %d bytes, %02X %02X %02X %02X %02X %02X %02X %02X",
+                     message.identifier, message.data_length_code, message.data[0], message.data[1],
+                     message.data[2], message.data[3], message.data[4], message.data[5],
+                     message.data[6], message.data[7]);
+        }
         if (MESSAGE_BUF->count >= MESSAGE_BUF_SIZE) {
             MESSAGE_BUF->count = 0;
             can_message = &MESSAGE_BUF->messages[MESSAGE_BUF->count];

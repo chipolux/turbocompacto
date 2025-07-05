@@ -125,3 +125,158 @@ id 201, 8 bytes, 15 00 00 00 00 00 00 00
 id 201, 8 bytes, 1A 00 00 00 00 00 00 00
 id 201, 8 bytes, 1B 00 00 00 00 00 00 00
 id 201, 8 bytes, 1C 00 00 00 00 00 00 00
+
+
+
+
+
+id 000, 1 bytes, 01 00
+id 000, 2 bytes, 00 01
+id 000, 2 bytes, 00 02
+id 000, 2 bytes, 00 03
+id 000, 2 bytes, 00 04
+id 000, 2 bytes, 00 05
+id 000, 2 bytes, 00 06
+id 000, 2 bytes, 00 07
+id 000, 2 bytes, 00 08
+id 000, 2 bytes, 00 09
+id 000, 2 bytes, 00 0A
+
+id 019, 2 bytes, 02 01
+id 019, 2 bytes, 07 43
+id 019, 2 bytes, 08 00
+id 019, 2 bytes, 08 01
+id 019, 2 bytes, FF 00
+id 019, 3 bytes, 01 02
+id 019, 3 bytes, 01 03
+id 019, 3 bytes, 06 01
+id 019, 3 bytes, 06 02
+
+id 049, 2 bytes, 02 01
+id 049, 2 bytes, 02 02
+id 049, 2 bytes, 03 02
+id 049, 2 bytes, 04 02
+id 049, 2 bytes, 0A 00
+id 049, 2 bytes, 0A 64
+id 049, 2 bytes, 0D 02
+id 049, 2 bytes, 0E 01
+id 049, 2 bytes, 0E 02
+id 049, 2 bytes, 13 02
+id 049, 2 bytes, 16 02
+id 049, 3 bytes, 01 02
+id 049, 3 bytes, 01 03
+id 049, 4 bytes, 07 5F
+id 049, 4 bytes, 08 00
+id 049, 4 bytes, 12 01
+id 049, 7 bytes, 0C 01
+id 049, 7 bytes, 0C 02
+id 049, 7 bytes, 0C 03
+id 049, 8 bytes, 06 00
+id 049, 8 bytes, 10 01
+id 049, 8 bytes, 10 02
+id 049, 8 bytes, 11 4E
+id 049, 8 bytes, FF 00
+
+id 156, 2 bytes, 15 64
+id 156, 4 bytes, 0F 01
+id 156, 4 bytes, 0F 02
+id 156, 5 bytes, 07 00
+id 156, 5 bytes, 1A 00
+id 156, 5 bytes, 1B 00
+id 156, 5 bytes, 1C 00
+
+id 201, 1 bytes, 07 00
+id 201, 1 bytes, 15 00
+id 201, 1 bytes, 1A 00
+id 201, 2 bytes, 0F 01
+id 201, 2 bytes, 0F 02
+id 201, 8 bytes, 15 00
+id 201, 8 bytes, 1A 00
+id 201, 8 bytes, 1B 00
+id 201, 8 bytes, 1C 00
+
+
+# double tap power button, switching to mode 1
+id 019, 2 bytes, 02 01
+# double tap power button, switching to mode 2
+id 019, 2 bytes, 02 02
+
+# emitted at startup, long press of power button
++00.00s id 019, 2 bytes, 02 01
++00.94s id 019, 3 bytes, 06 02 43
++00.00s id 019, 2 bytes, 08 00
++00.00s id 019, 2 bytes, 02 01
++00.21s id 019, 2 bytes, 07 43
++00.26s id 019, 3 bytes, 06 01 43
++00.21s id 019, 3 bytes, 01 01 02
++00.01s id 019, 2 bytes, 08 01
+
+# single press of power button, toggling lights on
+id 019, 3 bytes, 01 01 02
+# single press of power button, toggling lights off
+id 019, 3 bytes, 01 02 02
+
+
+
+id 049, 2 bytes, 02 01
+id 049, 2 bytes, 02 02
+
+id 049, 2 bytes, 03 02
+
+id 049, 2 bytes, 04 02
+
+id 049, 2 bytes, 0A 00
+id 049, 2 bytes, 0A 63
+id 049, 2 bytes, 0A 64
+
+id 049, 2 bytes, 0D 01
+id 049, 2 bytes, 0D 02
+
+id 049, 2 bytes, 0E 01
+id 049, 2 bytes, 0E 02
+
+id 049, 2 bytes, 13 01
+id 049, 2 bytes, 13 02
+
+id 049, 2 bytes, 16 02
+
+id 049, 3 bytes, 01 01 02
+id 049, 3 bytes, 01 02 02
+
+id 049, 4 bytes, 07 5F D3 00
+id 049, 4 bytes, 07 5F D8 00
+id 049, 4 bytes, 07 5F DC 00
+
+id 049, 4 bytes, 08 00 E4 00
+
+id 049, 4 bytes, 12 01 00 00
+id 049, 4 bytes, 12 01 01 00
+id 049, 4 bytes, 12 01 02 00
+
+id 049, 7 bytes, 0C 01 00 14 00 00 00
+id 049, 7 bytes, 0C 01 00 15 00 00 00
+id 049, 7 bytes, 0C 02 00 16 00 00 00
+id 049, 7 bytes, 0C 03 00 1D 00 00 00
+id 049, 7 bytes, 0C 03 00 1E 00 00 00
+id 049, 7 bytes, 0C 03 00 1F 00 00 00
+
+id 049, 8 bytes, 06 00 00 0A 00 00 00 00
+id 049, 8 bytes, 06 00 00 0F 00 00 00 00
+id 049, 8 bytes, 06 00 0F 0A 00 00 00 00
+id 049, 8 bytes, 06 00 0F 0F 00 00 00 00
+id 049, 8 bytes, 06 01 51 0F 00 00 00 00
+id 049, 8 bytes, 06 02 64 0F 00 00 00 00
+id 049, 8 bytes, 06 05 53 0F 00 00 00 00
+id 049, 8 bytes, 06 05 A0 0F 00 00 00 00
+id 049, 8 bytes, 06 06 58 0F 00 00 00 00
+id 049, 8 bytes, 06 07 99 0F 00 00 00 00
+id 049, 8 bytes, 06 07 D7 0F 00 00 00 00
+id 049, 8 bytes, 06 08 EA 0F 00 00 00 00
+id 049, 8 bytes, 06 09 09 0F 00 00 00 00
+
+id 049, 8 bytes, 10 01 43 54 34 30 30 30
+id 049, 8 bytes, 10 02 43 32 35 34 30 30
+
+id 049, 8 bytes, 11 4E 41 20 20 20 20 20
+
+id 049, 8 bytes, FF 00 00 00 00 00 00 00
