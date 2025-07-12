@@ -113,6 +113,18 @@ void app_main(void)
 
     setup_chip();
 
+    ESP_LOGI(TAG, "forcing twai silence on pin %d", TWAI_SLNT_PIN);
+    gpio_config_t twai_slnt_conf = {
+        .pin_bit_mask = (1ULL << TWAI_SLNT_PIN),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+    ESP_ERROR_CHECK(gpio_config(&twai_slnt_conf));
+    ESP_ERROR_CHECK(gpio_set_level(TWAI_SLNT_PIN, 1));
+    ESP_ERROR_CHECK(gpio_hold_en(TWAI_SLNT_PIN));
+
     ESP_LOGI(TAG, "can_message_t %d bytes, message buff %d bytes", sizeof(can_message_t),
              sizeof(MESSAGE_BUF));
 
